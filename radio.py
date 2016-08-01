@@ -37,4 +37,8 @@ class Radio():
 		if self.emisora_am < 300:
 			self.emisora_am = 1300
 		elif self.emisora_fm < 87.0:
-			self.emisora_fm = 107.0.0
+			self.emisora_fm = 107.0
+	def emisora_am(self):
+		self.en_am = True
+	def emisora_am(self):
+		self.en_am = False
