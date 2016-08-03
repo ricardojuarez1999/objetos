@@ -9,6 +9,7 @@ while seguir:
 			""")
 		resp = int(input("ingrese su opcion: "))
 	if resp == 1:
+		radio.encender()
 		print("""
 	1.apagar el radio
 	2.am/fm
@@ -22,11 +23,11 @@ while seguir:
 		if resp2 == 1:
 			radio.apagar()
 		elif resp2 == 2:
-			radio.en_am()
+			radio.cambiar_emisora()
 		elif resp2 == 3:
-			radio.subir_emisora()
+			radio.subir_estacion()
 		elif resp2 == 4:
-			radio.bajar_emisora()
+			radio.bajar_estacion()
 		elif resp2 == 5:
 			radio.subir_volumen()
 		elif resp2 == 6:
@@ -38,3 +39,4 @@ while seguir:
 	else:
 		seguir = False
 		print("su opcion no es valida, intente mas tarde")
+	print (radio)

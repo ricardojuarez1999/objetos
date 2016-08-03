@@ -25,7 +25,7 @@ class Radio():
 			self.emisora_am += 40
 		else:
 			self.emisora_fm += 0.5
-		if self.emisoraa_am > 1300:
+		if self.emisora_am > 1300:
 			self.emisora_am = 300
 		elif self.emisora_fm > 107.0:
 			self.emisora_fm = 87.0
@@ -40,3 +40,12 @@ class Radio():
 			self.emisora_fm = 107.0
 	def cambiar_emisora(self):
 		self.en_am = not self.en_am
+
+	def __str__(self):
+		resultado = ""
+		resultado += "Encendido: " + str(self.encendido)
+		resultado += "\nam/fm: " + str(self.en_am)
+		resultado += "\nemisora am: " + str(self.emisora_am)
+		resultado += "\nemisora fm: " + str(self.emisora_fm)
+		resultado += "\nvolumen: " + str(self.volumen)
+		return resultado
